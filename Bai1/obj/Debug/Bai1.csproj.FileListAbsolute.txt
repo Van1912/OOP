@@ -1,0 +1,7 @@
+C:\Users\khanh\source\repos\BTTH_Buoi6\Bai1\bin\Debug\Bai1.exe.config
+C:\Users\khanh\source\repos\BTTH_Buoi6\Bai1\bin\Debug\Bai1.exe
+C:\Users\khanh\source\repos\BTTH_Buoi6\Bai1\bin\Debug\Bai1.pdb
+C:\Users\khanh\source\repos\BTTH_Buoi6\Bai1\obj\Debug\Bai1.csproj.AssemblyReference.cache
+C:\Users\khanh\source\repos\BTTH_Buoi6\Bai1\obj\Debug\Bai1.csproj.CoreCompileInputs.cache
+C:\Users\khanh\source\repos\BTTH_Buoi6\Bai1\obj\Debug\Bai1.exe
+C:\Users\khanh\source\repos\BTTH_Buoi6\Bai1\obj\Debug\Bai1.pdb
