@@ -1,0 +1,57 @@
+﻿--Đếm số lượng giáo viên
+SELECT COUNT(*) AS N'SÔ LƯỢNG GIÁO VIÊN' FROM GIAOVIEN
+
+--Đếm SL người thân của GV có mã GV 007
+SELECT COUNT(*) AS N'SỐ LƯỢNG GIÁO VIÊN' 
+FROM GIAOVIEN, NGUOITHAN
+WHERE GIAOVIEN.MAGV='007' AND GIAOVIEN.MAGV=NGUOITHAN.MAGV
+
+--Lấy ra tên GV và tên ĐT người đó tgia
+SELECT HOTEN,TENDT
+FROM GIAOVIEN GV,DETAI DT, THAMGIADT TGDT
+WHERE GV.MAGV=TGDT.MAGV
+AND DT.MADT=TGDT.MADT
+
+--Lấy ra tên GV và tên ĐT người đó tgia khi mà người đó tgia nhiều hơn 1 lần
+SELECT HOTEN,TENDT
+FROM GIAOVIEN GV,DETAI DT, THAMGIADT TGDT
+WHERE GV.MAGV=TGDT.MAGV
+AND DT.MADT=TGDT.MADT
+
+--Xuất ra thông tin GV và GVQL chủ nhiệm của người đó
+SELECT GV1.HOTEN, gv2.HOTEN
+FROM GIAOVIEN AS GV1, GIAOVIEN AS GV2
+WHERE GV1.MAGV=GV2.MAGV
+
+--Xuất ra số lượng GV của khoa CNTT
+SELECT COUNT(*) AS N'SỐ LƯỢNG GV KHOA CNTT'
+FROM GIAOVIEN GV, BOMON BM, KHOA K
+WHERE GV.MABM=BM.MABM
+AND BM.MAKHOA=K.MAKHOA
+AND K.MAKHOA=N'CNTT'
+
+--Xuất ra thông tin GV và đề tài người đó tgia khi mà kết quả là đạt
+SELECT GV.*
+FROM GIAOVIEN GV, THAMGIADT TGDT
+WHERE GV.MAGV=TGDT.MAGV
+AND TGDT.KETQUA=N'Đạt'
+
+--Xuất ra thông tin GV mà tên bắt đầu bằng chữ l
+SELECT * 
+FROM GIAOVIEN 
+WHERE HOTEN LIKE 'l%'
+
+--Xuất ra thông tin Gv kết thúc bằng chữ n
+SELECT *
+FROM GIAOVIEN
+WHERE HOTEN LIKE '%n'
+
+--Xuất thông tin GV có tồn tại chữ n
+SELECT *
+FROM GIAOVIEN
+WHERE HOTEN LIKE '%n%'
+
+--Xuất ra thông tin GV có tồn tại chữ ế
+SELECT *
+FROM GIAOVIEN
+WHERE HOTEN LIKE N'%ế%'
